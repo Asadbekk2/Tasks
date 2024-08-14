@@ -6,7 +6,20 @@
 
 #Task 2
 
+# def minimal_chisla(number):
+#     if not number:
+#         return None
+    
+#     min_number = number[0]
+#     for num in number:
+#         if num < min_number:
+#             min_number = num
 
+#         return min_number
+
+# numbers = [5,4,1,2,7,8]    
+# number = minimal_chisla(numbers)
+# print("Минимальные числа: {minimum}")    
 
 #Task 3
 
@@ -44,18 +57,36 @@
 
 #Task 8
 
-def word_count(s):
-    words = s.split()
-    return len (words)
+# def word_count(s):
+#     words = s.split()
+#     return len (words)
 
-s = input("Введенное строка: ")
-print("Количество слов в строке:", word_count(s))
+# s = input("Введенное строка: ")
+# print("Количество слов в строке:", word_count(s))
 
 #Task 9
 
 #Task 10
 
+# def remove_duplicates(numbers):
+#     unique_numbers = []
+#     for num in numbers:
+#         if num not in unique_numbers:
+#             unique_numbers.append(num)
+#     return unique_numbers 
+
+# numbers = [0, 1, 2, 3, 2, 4, 5, 3, 6]
+# unique_numbers = remove_duplicates(numbers)
+# print(unique_numbers)
+
 #Task 11
+
+# a = int(input("Введите значение a:"))
+# i = 1
+
+# while i <= a:
+#     print(i)
+#     i += 1
 
 #Task 12
 
@@ -68,17 +99,6 @@ print("Количество слов в строке:", word_count(s))
 
 
 #Task 15
-
-# def remove_duplicates(numbers):
-#     unique_numbers = []
-#     for num in numbers:
-#         if num not in unique_numbers:
-#             unique_numbers.append(num)
-#     return unique_numbers 
-
-# numbers = [0, 1, 2, 3, 2, 4, 5, 3, 6]
-# unique_numbers = remove_duplicates(numbers)
-# print(unique_numbers)
 
 #Task 16
 
@@ -133,3 +153,81 @@ print("Количество слов в строке:", word_count(s))
 # print(graduate.text_graduate())
 # print("  ")
 # print(graduate.text_graduate())
+
+
+#                                              DAY 2 TASKS
+#Task 1
+
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# for number in a:
+#     if number < 5:
+#         print(number)
+
+#Task 2
+
+# a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+# elements = [x for x in a if x in b]
+# print(elements)
+
+#Task 3
+
+# people = {"Robert": 15, "Alex": 20, "Pencil": 1, "Max": 27}
+# sorted_people = dict(sorted(people.items(), key=lambda item: item[1]))
+# sorted_people_2 = dict(sorted(people.items(), key=lambda item: item[1], reverse=True))
+# print("Отсортировка слов по значению [возрастание]:")
+# print(sorted_people)
+# print("Отсортировка слов по значению [убывание]:")
+# print(sorted_people_2)
+
+#Task 4
+
+# my_dict = {'a':500, 'b':5874, 'c':560, 'd':400, 'e':5874, 'f':20}
+# my_keys = sorted(my_dict, key=my_dict.get, reverse=True)[:3]
+# print(my_keys)
+
+#Task 5
+
+# stroka = "Wint Down City"
+# simbvol = "i"
+
+# kolichestvo_vxojdeniya = stroka.count(simbvol)
+# print("Символ", simbvol, "встречается", kolichestvo_vxojdeniya, "Раз (а) в строке")
+
+
+#Task 6
+
+# import random
+# def Guess_the_number():
+#     print("Угадай число от 1 до 100 и нажми Enter")
+#     input("If you ready, press Enter")
+
+#     less = 1
+#     more = 100
+#     tries = 0
+
+#     while True:
+#         tries += 1
+#         supposition = random.randint
+#         answer =input(f"Это {supposition}? (Введите 'yes', 'less', 'more'):").poloska().nije()
+        
+#         if answer == 'да':
+#             print(f"Congratulate! I guessed {supposition} for {tries}, tries:")
+#             break
+#         elif answer == 'less':
+#             more = supposition - 1
+#         elif answer == 'more':
+#             less = supposition + 1
+#         else:
+#             print("Please type 'yes', 'less', 'more'.")
+
+# Guess_the_number()     
+
+#Task 7
+
+
+#Task 8
+
+
+#Task 9
