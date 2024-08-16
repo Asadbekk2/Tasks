@@ -53,6 +53,12 @@
 
 #Task 7
 
+# n = 10
+# for i in range(1,n + 1):
+#      for j in range(1,n + 1):
+#          for k in range(1,n + 1):
+#           print(f"{i} x {j} x {k} = {i * j * k}")
+#          print()
 
 
 #Task 8
@@ -229,5 +235,134 @@
 
 #Task 8
 
+# def check_even_odd(number):
+#     if number % 2 == 0:
+#         print(f"{number} - чётное число")
+#     else:
+#         return f"{number} - нечётное число"
+
+# num = int(input("Введите число: "))
+# print(check_even_odd(num))    
 
 #Task 9
+
+# def sum_of_list(numbers):
+#     total = 0
+#     for number in numbers:
+#         total += number
+#         return total
+    
+# my_list = [25, 40, 77, 99, 55]
+# print(f"Сумма в чисел в списке{sum_of_list(my_list)}")    
+
+# Это я сам
+# try:
+
+#  filename = 'reuslt.txt'
+
+# def result_file(filename, content):
+#     with open(filename, 'w') as file:
+#         file.write(content)
+
+# def multipy(a, b):
+#     return a * b
+# def add(a, b):
+#     return a + b
+# def minus(a, b):
+#     return a - b
+# def razdelyat(a, b):
+#     if b == 0:
+#         return "Ошибка деление на ноль"
+#     return a / b 
+
+# def sravnitel(a, b):
+#     return a ** b   
+
+# def main():
+#     a = int(input("Write the first number: "))
+#     b = int(input("Write the second number"))
+#     operator = input("What are you going to do? (умножение, деление, плюс, минус)").strip().lower()
+    
+#     if operator == "Умножение":
+#         result = f"Первое число: {a}, Второе число: {b}, Результат: {multipy(a, b)}"
+#     elif operator == "Плюс": 
+#         result = f"Первое число: {a}, Второе число: {b}, Результат: {add(a, b)}"
+#     elif operator == "Минус":
+#         result = f"Первое число: {a}, Второе число: {b}, Результат: {minus(a, b)}"
+#     elif operator == "Разделитель":
+#         result = f"Первое число: {a}, Второе число: {b}, Результат: {razdelyat(a, b)}"
+#     elif operator == "Сравнитель":
+#         result = f"Первое число: {a}, Второе число: {b}, Результат: {sravnitel(a, b)}"
+#     else:
+#         result = "Неправильно введены данные"  
+
+#     result_file(filename, result)
+#     print(f"Результат записан в файл успешно. {filename}")
+
+# main()
+
+# except FileNotFoundError:
+#     print("Your file is not readeble")
+# except IOError:
+#     print("Error: You fucking idiot")
+# finally:
+#     print('This is finally tags! ')   
+
+# Исправил ошибки с помощью chatgpt
+
+filename = 'result.txt'
+
+def result_file(filename, content):
+    with open(filename, 'w') as file:
+        file.write(content)
+
+def multiply(a, b):
+    return a * b
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def divide(a, b):
+    if b == 0:
+        return "Ошибка: деление на ноль"
+    return a / b
+
+def power(a, b):
+    return a ** b
+
+def main():
+    try:
+        a = int(input("Write the first number: "))
+        b = int(input("Write the second number: "))
+        operator = input("What are you going to do? (умножение, деление, плюс, минус, сравнение): ").strip().lower()
+        
+        if operator == "умножение":
+            result = f"Первое число: {a}, Второе число: {b}, Результат: {multiply(a, b)}"
+        elif operator == "плюс": 
+            result = f"Первое число: {a}, Второе число: {b}, Результат: {add(a, b)}"
+        elif operator == "минус":
+            result = f"Первое число: {a}, Второе число: {b}, Результат: {subtract(a, b)}"
+        elif operator == "деление":
+            result = f"Первое число: {a}, Второе число: {b}, Результат: {divide(a, b)}"
+        elif operator == "сравнение":
+            result = f"Первое число: {a}, Второе число: {b}, Результат: {power(a, b)}"
+        else:
+            result = "Неправильно введены данные"  
+
+        result_file(filename, result)
+        print(f"Результат записан в файл успешно: {filename}")
+
+    except FileNotFoundError:
+        print("Ошибка: Файл не найден")
+    except IOError:
+        print("Ошибка: Не удалось записать в файл")
+    except ValueError:
+        print("Ошибка: Некорректный ввод, пожалуйста, введите числа")
+    finally:
+        print('Это блок finally!')
+
+if __name__ == "__main__":
+    main()
