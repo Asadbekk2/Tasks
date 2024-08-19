@@ -310,59 +310,107 @@
 
 # Исправил ошибки с помощью chatgpt
 
-filename = 'result.txt'
+# filename = 'result.txt'
 
-def result_file(filename, content):
-    with open(filename, 'w') as file:
-        file.write(content)
+# def result_file(filename, content):
+#     with open(filename, 'w') as file:
+#         file.write(content)
 
-def multiply(a, b):
-    return a * b
+# def multiply(a, b):
+#     return a * b
 
-def add(a, b):
-    return a + b
+# def add(a, b):
+#     return a + b
 
-def subtract(a, b):
-    return a - b
+# def subtract(a, b):
+#     return a - b
 
-def divide(a, b):
-    if b == 0:
-        return "Ошибка: деление на ноль"
-    return a / b
+# def divide(a, b):
+#     if b == 0:
+#         return "Ошибка: деление на ноль"
+#     return a / b
 
-def power(a, b):
-    return a ** b
+# def power(a, b):
+#     return a ** b
 
-def main():
-    try:
-        a = int(input("Write the first number: "))
-        b = int(input("Write the second number: "))
-        operator = input("What are you going to do? (умножение, деление, плюс, минус, сравнение): ").strip().lower()
+# def main():
+#     try:
+#         a = int(input("Write the first number: "))
+#         b = int(input("Write the second number: "))
+#         operator = input("What are you going to do? (умножение, деление, плюс, минус, сравнение): ").strip().lower()
         
-        if operator == "умножение":
-            result = f"Первое число: {a}, Второе число: {b}, Результат: {multiply(a, b)}"
-        elif operator == "плюс": 
-            result = f"Первое число: {a}, Второе число: {b}, Результат: {add(a, b)}"
-        elif operator == "минус":
-            result = f"Первое число: {a}, Второе число: {b}, Результат: {subtract(a, b)}"
-        elif operator == "деление":
-            result = f"Первое число: {a}, Второе число: {b}, Результат: {divide(a, b)}"
-        elif operator == "сравнение":
-            result = f"Первое число: {a}, Второе число: {b}, Результат: {power(a, b)}"
+#         if operator == "*":
+#             result = f"Первое число: {a}, Второе число: {b}, Результат: {multiply(a, b)}"
+#         elif operator == "+": 
+#             result = f"Первое число: {a}, Второе число: {b}, Результат: {add(a, b)}"
+#         elif operator == "-":
+#             result = f"Первое число: {a}, Второе число: {b}, Результат: {subtract(a, b)}"
+#         elif operator == "÷":
+#             result = f"Первое число: {a}, Второе число: {b}, Результат: {divide(a, b)}"
+#         elif operator == "^":
+#             result = f"Первое число: {a}, Второе число: {b}, Результат: {power(a, b)}"
+#         else:
+#             result = "Неправильно введены данные"  
+
+#         result_file(filename, result)
+#         print(f"Результат записан в файл успешно: {filename}")
+
+#     except FileNotFoundError:
+#         print("Ошибка: Файл не найден")
+#     except IOError:
+#         print("Ошибка: Не удалось записать в файл")
+#     except ValueError:
+#         print("Ошибка: Некорректный ввод, пожалуйста, введите числа")
+#     finally:
+#         print('Это блок finally!')
+
+# if __name__ == "__main__":
+#     main()
+
+#                                                  DAY 3
+
+# class Triangle:
+#     def __init__(self, base, height):
+#         self.base = base
+#         self.height = height
+    
+#     def area(self):
+#         return 0.5 * self.base * self.height
+    
+# c = Triangle (5,10)
+
+# u = int (input("Give me number..."))
+# d = int (input("Ploshad"))
+# c = Triangle (u,d)
+# print(f"Area: {c.area }")
+
+#Task 2
+
+class Nikolai:
+    __slots__ = ['name', 'age']
+
+    def __init__(self, name, age):
+        if name == 'Николай':
+            self.name = name
         else:
-            result = "Неправильно введены данные"  
+            self.name = f"I am not {name}, I am Николай" 
+        self.age = age       
+try:
+ name1 = input("Write your name: ")
+ age1 = int(input("Write your age: "))
 
-        result_file(filename, result)
-        print(f"Результат записан в файл успешно: {filename}")
+ name2 = input("Write the second name: ")
+ age2 = int(input("Write the second age: "))
 
-    except FileNotFoundError:
-        print("Ошибка: Файл не найден")
-    except IOError:
-        print("Ошибка: Не удалось записать в файл")
-    except ValueError:
-        print("Ошибка: Некорректный ввод, пожалуйста, введите числа")
-    finally:
-        print('Это блок finally!')
+ person1 = Nikolai(name1,age1)
+ person2 = Nikolai(name2, age2)
+ print(person1.name)
+ print(person2.name)                  
 
-if __name__ == "__main__":
-    main()
+except ValueError:
+    print("Error! something with number is not working. ")
+
+#Task 3
+
+# class RealString:
+#     def __init__(self,)
